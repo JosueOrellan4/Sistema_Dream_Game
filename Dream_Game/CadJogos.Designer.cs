@@ -150,7 +150,7 @@ namespace Dream_Game
             // 
             // textBoxAvaliacao
             // 
-            textBoxAvaliacao.Location = new Point(544, 89);
+            textBoxAvaliacao.Location = new Point(538, 89);
             textBoxAvaliacao.Name = "textBoxAvaliacao";
             textBoxAvaliacao.Size = new Size(267, 23);
             textBoxAvaliacao.TabIndex = 9;
@@ -166,7 +166,7 @@ namespace Dream_Game
             // 
             // textBoxDesenvolvedor
             // 
-            textBoxDesenvolvedor.Location = new Point(544, 223);
+            textBoxDesenvolvedor.Location = new Point(539, 224);
             textBoxDesenvolvedor.Name = "textBoxDesenvolvedor";
             textBoxDesenvolvedor.Size = new Size(267, 23);
             textBoxDesenvolvedor.TabIndex = 13;
@@ -219,7 +219,7 @@ namespace Dream_Game
             // 
             // richTextBoxDescricao
             // 
-            richTextBoxDescricao.Location = new Point(544, 134);
+            richTextBoxDescricao.Location = new Point(539, 134);
             richTextBoxDescricao.Name = "richTextBoxDescricao";
             richTextBoxDescricao.Size = new Size(267, 82);
             richTextBoxDescricao.TabIndex = 18;
