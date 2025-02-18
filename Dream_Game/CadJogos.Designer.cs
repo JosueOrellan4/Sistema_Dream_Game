@@ -38,7 +38,6 @@ namespace Dream_Game
             label7 = new Label();
             label8 = new Label();
             textBoxTitulo = new TextBox();
-            textBoxAvaliacao = new TextBox();
             textBoxTamanho = new TextBox();
             textBoxDesenvolvedor = new TextBox();
             textBoxGenero = new TextBox();
@@ -48,6 +47,7 @@ namespace Dream_Game
             richTextBoxDescricao = new RichTextBox();
             label9 = new Label();
             maskedTextBoxValor = new MaskedTextBox();
+            maskedTextBoxAvaliacao = new MaskedTextBox();
             SuspendLayout();
             // 
             // label2
@@ -145,23 +145,15 @@ namespace Dream_Game
             textBoxTitulo.Location = new Point(141, 89);
             textBoxTitulo.Name = "textBoxTitulo";
             textBoxTitulo.Size = new Size(267, 23);
-            textBoxTitulo.TabIndex = 8;
+            textBoxTitulo.TabIndex = 0;
             textBoxTitulo.TextChanged += textBoxTitulo_TextChanged;
-            // 
-            // textBoxAvaliacao
-            // 
-            textBoxAvaliacao.Location = new Point(538, 89);
-            textBoxAvaliacao.Name = "textBoxAvaliacao";
-            textBoxAvaliacao.Size = new Size(267, 23);
-            textBoxAvaliacao.TabIndex = 9;
-            textBoxAvaliacao.TextChanged += textBoxAvaliacao_TextChanged;
             // 
             // textBoxTamanho
             // 
             textBoxTamanho.Location = new Point(141, 135);
             textBoxTamanho.Name = "textBoxTamanho";
             textBoxTamanho.Size = new Size(267, 23);
-            textBoxTamanho.TabIndex = 10;
+            textBoxTamanho.TabIndex = 1;
             textBoxTamanho.TextChanged += textBoxTamanho_TextChanged;
             // 
             // textBoxDesenvolvedor
@@ -169,14 +161,14 @@ namespace Dream_Game
             textBoxDesenvolvedor.Location = new Point(539, 224);
             textBoxDesenvolvedor.Name = "textBoxDesenvolvedor";
             textBoxDesenvolvedor.Size = new Size(267, 23);
-            textBoxDesenvolvedor.TabIndex = 13;
+            textBoxDesenvolvedor.TabIndex = 6;
             // 
             // textBoxGenero
             // 
             textBoxGenero.Location = new Point(141, 223);
             textBoxGenero.Name = "textBoxGenero";
             textBoxGenero.Size = new Size(267, 23);
-            textBoxGenero.TabIndex = 14;
+            textBoxGenero.TabIndex = 3;
             // 
             // button1
             // 
@@ -186,7 +178,7 @@ namespace Dream_Game
             button1.Location = new Point(141, 313);
             button1.Name = "button1";
             button1.Size = new Size(140, 36);
-            button1.TabIndex = 15;
+            button1.TabIndex = 7;
             button1.Text = "Cadastrar";
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
@@ -199,7 +191,7 @@ namespace Dream_Game
             button2.Location = new Point(353, 313);
             button2.Name = "button2";
             button2.Size = new Size(140, 36);
-            button2.TabIndex = 16;
+            button2.TabIndex = 8;
             button2.Text = "Limpar Campos";
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
@@ -212,7 +204,7 @@ namespace Dream_Game
             button3.Location = new Point(544, 313);
             button3.Name = "button3";
             button3.Size = new Size(140, 36);
-            button3.TabIndex = 17;
+            button3.TabIndex = 9;
             button3.Text = "Fechar";
             button3.UseVisualStyleBackColor = false;
             button3.Click += button3_Click;
@@ -222,7 +214,7 @@ namespace Dream_Game
             richTextBoxDescricao.Location = new Point(539, 134);
             richTextBoxDescricao.Name = "richTextBoxDescricao";
             richTextBoxDescricao.Size = new Size(267, 82);
-            richTextBoxDescricao.TabIndex = 18;
+            richTextBoxDescricao.TabIndex = 5;
             richTextBoxDescricao.Text = "";
             // 
             // label9
@@ -240,10 +232,18 @@ namespace Dream_Game
             // maskedTextBoxValor
             // 
             maskedTextBoxValor.Location = new Point(141, 179);
-            maskedTextBoxValor.Mask = "$000,000.00";
+            maskedTextBoxValor.Mask = "$000,000,000.00";
             maskedTextBoxValor.Name = "maskedTextBoxValor";
             maskedTextBoxValor.Size = new Size(267, 23);
-            maskedTextBoxValor.TabIndex = 20;
+            maskedTextBoxValor.TabIndex = 2;
+            // 
+            // maskedTextBoxAvaliacao
+            // 
+            maskedTextBoxAvaliacao.Location = new Point(538, 90);
+            maskedTextBoxAvaliacao.Mask = "0.0";
+            maskedTextBoxAvaliacao.Name = "maskedTextBoxAvaliacao";
+            maskedTextBoxAvaliacao.Size = new Size(268, 23);
+            maskedTextBoxAvaliacao.TabIndex = 4;
             // 
             // CadJogos
             // 
@@ -251,6 +251,7 @@ namespace Dream_Game
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(818, 471);
+            Controls.Add(maskedTextBoxAvaliacao);
             Controls.Add(maskedTextBoxValor);
             Controls.Add(label9);
             Controls.Add(richTextBoxDescricao);
@@ -260,7 +261,6 @@ namespace Dream_Game
             Controls.Add(textBoxGenero);
             Controls.Add(textBoxDesenvolvedor);
             Controls.Add(textBoxTamanho);
-            Controls.Add(textBoxAvaliacao);
             Controls.Add(textBoxTitulo);
             Controls.Add(label8);
             Controls.Add(label7);
@@ -271,6 +271,7 @@ namespace Dream_Game
             Controls.Add(label2);
             Name = "CadJogos";
             Text = "CadJogos";
+            Load += CadJogos_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -289,7 +290,6 @@ namespace Dream_Game
         private Label label7;
         private Label label8;
         private TextBox textBoxTitulo;
-        private TextBox textBoxAvaliacao;
         private TextBox textBoxTamanho;
         private TextBox textBoxValor;
         private TextBox textBoxDesenvolvedor;
@@ -300,5 +300,6 @@ namespace Dream_Game
         private RichTextBox richTextBoxDescricao;
         private Label label9;
         private MaskedTextBox maskedTextBoxValor;
+        private MaskedTextBox maskedTextBoxAvaliacao;
     }
 }

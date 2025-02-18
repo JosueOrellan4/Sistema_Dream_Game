@@ -57,7 +57,7 @@
             button1.Location = new Point(76, 172);
             button1.Name = "button1";
             button1.Size = new Size(238, 78);
-            button1.TabIndex = 1;
+            button1.TabIndex = 0;
             button1.Text = "Cadastrar Jogo";
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
@@ -71,7 +71,7 @@
             button2.Location = new Point(371, 172);
             button2.Name = "button2";
             button2.Size = new Size(238, 78);
-            button2.TabIndex = 2;
+            button2.TabIndex = 1;
             button2.Text = "Gerenciamento Jogos";
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;

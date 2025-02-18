@@ -70,7 +70,7 @@
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
             label1.Size = new Size(69, 19);
-            label1.TabIndex = 2;
+            label1.TabIndex = 6;
             label1.Text = "Usuario";
             // 
             // label2
@@ -83,7 +83,7 @@
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
             label2.Size = new Size(58, 19);
-            label2.TabIndex = 3;
+            label2.TabIndex = 7;
             label2.Text = "Senha";
             // 
             // button1
@@ -97,7 +97,7 @@
             button1.Margin = new Padding(4, 3, 4, 3);
             button1.Name = "button1";
             button1.Size = new Size(132, 30);
-            button1.TabIndex = 4;
+            button1.TabIndex = 3;
             button1.Text = "Entrar";
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
@@ -127,7 +127,7 @@
             buttonLimparCampos.Margin = new Padding(4, 3, 4, 3);
             buttonLimparCampos.Name = "buttonLimparCampos";
             buttonLimparCampos.Size = new Size(141, 33);
-            buttonLimparCampos.TabIndex = 6;
+            buttonLimparCampos.TabIndex = 4;
             buttonLimparCampos.Text = "LimparCampos";
             buttonLimparCampos.UseVisualStyleBackColor = false;
             buttonLimparCampos.Click += buttonLimparCampos_Click;

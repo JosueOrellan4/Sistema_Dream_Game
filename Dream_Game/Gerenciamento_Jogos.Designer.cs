@@ -44,7 +44,7 @@
             dgvJogos.Location = new Point(60, 94);
             dgvJogos.Name = "dgvJogos";
             dgvJogos.Size = new Size(483, 286);
-            dgvJogos.TabIndex = 2;
+            dgvJogos.TabIndex = 1;
             // 
             // buttonPesquisarClientes
             // 
@@ -54,7 +54,7 @@
             buttonPesquisarClientes.Location = new Point(549, 94);
             buttonPesquisarClientes.Name = "buttonPesquisarClientes";
             buttonPesquisarClientes.Size = new Size(155, 39);
-            buttonPesquisarClientes.TabIndex = 3;
+            buttonPesquisarClientes.TabIndex = 0;
             buttonPesquisarClientes.Text = "Pesquisar";
             buttonPesquisarClientes.UseVisualStyleBackColor = false;
             buttonPesquisarClientes.Click += button1_Click;
@@ -67,7 +67,7 @@
             buttonRemoverClientes.Location = new Point(549, 139);
             buttonRemoverClientes.Name = "buttonRemoverClientes";
             buttonRemoverClientes.Size = new Size(155, 39);
-            buttonRemoverClientes.TabIndex = 4;
+            buttonRemoverClientes.TabIndex = 2;
             buttonRemoverClientes.Text = "Remover";
             buttonRemoverClientes.UseVisualStyleBackColor = false;
             buttonRemoverClientes.Click += buttonRemoverClientes_Click;
@@ -80,7 +80,7 @@
             buttonFechar.Location = new Point(549, 341);
             buttonFechar.Name = "buttonFechar";
             buttonFechar.Size = new Size(155, 39);
-            buttonFechar.TabIndex = 5;
+            buttonFechar.TabIndex = 3;
             buttonFechar.Text = "Fechar";
             buttonFechar.UseVisualStyleBackColor = false;
             buttonFechar.Click += buttonFechar_Click;
