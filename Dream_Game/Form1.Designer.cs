@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             textBoxUsuario = new TextBox();
             textBoxSenha = new TextBox();
             label1 = new Label();
@@ -40,7 +41,9 @@
             // 
             // textBoxUsuario
             // 
-            textBoxUsuario.Location = new Point(214, 119);
+            textBoxUsuario.BackColor = Color.Snow;
+            textBoxUsuario.BorderStyle = BorderStyle.FixedSingle;
+            textBoxUsuario.Location = new Point(139, 123);
             textBoxUsuario.Margin = new Padding(4, 3, 4, 3);
             textBoxUsuario.Name = "textBoxUsuario";
             textBoxUsuario.Size = new Size(339, 21);
@@ -48,7 +51,9 @@
             // 
             // textBoxSenha
             // 
-            textBoxSenha.Location = new Point(214, 198);
+            textBoxSenha.BackColor = Color.Snow;
+            textBoxSenha.BorderStyle = BorderStyle.FixedSingle;
+            textBoxSenha.Location = new Point(139, 202);
             textBoxSenha.Margin = new Padding(4, 3, 4, 3);
             textBoxSenha.Name = "textBoxSenha";
             textBoxSenha.PasswordChar = '*';
@@ -58,59 +63,73 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Arial Narrow", 12F);
-            label1.Location = new Point(138, 122);
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.Snow;
+            label1.Location = new Point(63, 126);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(54, 20);
+            label1.Size = new Size(69, 19);
             label1.TabIndex = 2;
             label1.Text = "Usuario";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Arial Narrow", 12F);
-            label2.Location = new Point(145, 197);
+            label2.BackColor = Color.Transparent;
+            label2.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.Snow;
+            label2.Location = new Point(70, 201);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(47, 20);
+            label2.Size = new Size(58, 19);
             label2.TabIndex = 3;
             label2.Text = "Senha";
             // 
             // button1
             // 
+            button1.BackColor = Color.Snow;
+            button1.BackgroundImageLayout = ImageLayout.Center;
+            button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Microsoft Sans Serif", 12F);
-            button1.Location = new Point(321, 312);
+            button1.ForeColor = Color.Purple;
+            button1.Location = new Point(270, 309);
             button1.Margin = new Padding(4, 3, 4, 3);
             button1.Name = "button1";
-            button1.Size = new Size(132, 25);
+            button1.Size = new Size(132, 30);
             button1.TabIndex = 4;
             button1.Text = "Entrar";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
             // buttonMostrarSenha
             // 
+            buttonMostrarSenha.BackColor = Color.Snow;
+            buttonMostrarSenha.FlatStyle = FlatStyle.Flat;
             buttonMostrarSenha.Font = new Font("Microsoft Sans Serif", 12F);
-            buttonMostrarSenha.Location = new Point(578, 195);
+            buttonMostrarSenha.ForeColor = Color.Purple;
+            buttonMostrarSenha.Location = new Point(503, 199);
             buttonMostrarSenha.Margin = new Padding(4, 3, 4, 3);
             buttonMostrarSenha.Name = "buttonMostrarSenha";
-            buttonMostrarSenha.Size = new Size(141, 27);
+            buttonMostrarSenha.Size = new Size(141, 32);
             buttonMostrarSenha.TabIndex = 5;
             buttonMostrarSenha.Text = "MostrarSenha";
-            buttonMostrarSenha.UseVisualStyleBackColor = true;
+            buttonMostrarSenha.UseVisualStyleBackColor = false;
             buttonMostrarSenha.Click += buttonMostrarSenha_Click;
             // 
             // buttonLimparCampos
             // 
+            buttonLimparCampos.BackColor = Color.Snow;
+            buttonLimparCampos.FlatStyle = FlatStyle.Flat;
             buttonLimparCampos.Font = new Font("Microsoft Sans Serif", 12F);
-            buttonLimparCampos.Location = new Point(578, 118);
+            buttonLimparCampos.ForeColor = Color.Purple;
+            buttonLimparCampos.Location = new Point(503, 122);
             buttonLimparCampos.Margin = new Padding(4, 3, 4, 3);
             buttonLimparCampos.Name = "buttonLimparCampos";
-            buttonLimparCampos.Size = new Size(141, 28);
+            buttonLimparCampos.Size = new Size(141, 33);
             buttonLimparCampos.TabIndex = 6;
             buttonLimparCampos.Text = "LimparCampos";
-            buttonLimparCampos.UseVisualStyleBackColor = true;
+            buttonLimparCampos.UseVisualStyleBackColor = false;
             buttonLimparCampos.Click += buttonLimparCampos_Click;
             // 
             // labelMenssagem
@@ -127,7 +146,10 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(808, 415);
+            BackColor = Color.DarkGray;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Center;
+            ClientSize = new Size(686, 415);
             Controls.Add(labelMenssagem);
             Controls.Add(buttonLimparCampos);
             Controls.Add(buttonMostrarSenha);

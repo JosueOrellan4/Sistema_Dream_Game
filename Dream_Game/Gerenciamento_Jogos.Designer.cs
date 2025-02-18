@@ -28,82 +28,98 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label2 = new Label();
-            dataGridView1 = new DataGridView();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Gerenciamento_Jogos));
+            dgvJogos = new DataGridView();
             buttonPesquisarClientes = new Button();
             buttonRemoverClientes = new Button();
             buttonFechar = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            label1 = new Label();
+            ((System.ComponentModel.ISupportInitialize)dgvJogos).BeginInit();
             SuspendLayout();
             // 
-            // label2
+            // dgvJogos
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Microsoft Sans Serif", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(227, 33);
-            label2.Name = "label2";
-            label2.Size = new Size(316, 31);
-            label2.TabIndex = 1;
-            label2.Text = "Gerenciamento de Jogos";
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(60, 94);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(483, 286);
-            dataGridView1.TabIndex = 2;
+            dgvJogos.BackgroundColor = Color.DarkOrchid;
+            dgvJogos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvJogos.Location = new Point(60, 94);
+            dgvJogos.Name = "dgvJogos";
+            dgvJogos.Size = new Size(483, 286);
+            dgvJogos.TabIndex = 2;
             // 
             // buttonPesquisarClientes
             // 
-            buttonPesquisarClientes.Location = new Point(582, 94);
+            buttonPesquisarClientes.BackColor = Color.DarkViolet;
+            buttonPesquisarClientes.FlatStyle = FlatStyle.Flat;
+            buttonPesquisarClientes.ForeColor = Color.Snow;
+            buttonPesquisarClientes.Location = new Point(549, 94);
             buttonPesquisarClientes.Name = "buttonPesquisarClientes";
             buttonPesquisarClientes.Size = new Size(155, 39);
             buttonPesquisarClientes.TabIndex = 3;
             buttonPesquisarClientes.Text = "Pesquisar";
-            buttonPesquisarClientes.UseVisualStyleBackColor = true;
+            buttonPesquisarClientes.UseVisualStyleBackColor = false;
             buttonPesquisarClientes.Click += button1_Click;
             // 
             // buttonRemoverClientes
             // 
-            buttonRemoverClientes.Location = new Point(582, 157);
+            buttonRemoverClientes.BackColor = Color.DarkViolet;
+            buttonRemoverClientes.FlatStyle = FlatStyle.Flat;
+            buttonRemoverClientes.ForeColor = Color.Snow;
+            buttonRemoverClientes.Location = new Point(549, 139);
             buttonRemoverClientes.Name = "buttonRemoverClientes";
             buttonRemoverClientes.Size = new Size(155, 39);
             buttonRemoverClientes.TabIndex = 4;
             buttonRemoverClientes.Text = "Remover";
-            buttonRemoverClientes.UseVisualStyleBackColor = true;
+            buttonRemoverClientes.UseVisualStyleBackColor = false;
+            buttonRemoverClientes.Click += buttonRemoverClientes_Click;
             // 
             // buttonFechar
             // 
-            buttonFechar.Location = new Point(582, 219);
+            buttonFechar.BackColor = Color.DarkViolet;
+            buttonFechar.FlatStyle = FlatStyle.Flat;
+            buttonFechar.ForeColor = Color.Snow;
+            buttonFechar.Location = new Point(549, 341);
             buttonFechar.Name = "buttonFechar";
             buttonFechar.Size = new Size(155, 39);
             buttonFechar.TabIndex = 5;
             buttonFechar.Text = "Fechar";
-            buttonFechar.UseVisualStyleBackColor = true;
+            buttonFechar.UseVisualStyleBackColor = false;
+            buttonFechar.Click += buttonFechar_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Palatino Linotype", 26.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.Snow;
+            label1.Location = new Point(173, 24);
+            label1.Name = "label1";
+            label1.Size = new Size(265, 47);
+            label1.TabIndex = 6;
+            label1.Text = "Menu Principal";
             // 
             // Gerenciamento_Jogos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(800, 450);
+            Controls.Add(label1);
             Controls.Add(buttonFechar);
             Controls.Add(buttonRemoverClientes);
             Controls.Add(buttonPesquisarClientes);
-            Controls.Add(dataGridView1);
-            Controls.Add(label2);
+            Controls.Add(dgvJogos);
             Name = "Gerenciamento_Jogos";
             Text = "Gerenciamento_Jogos";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvJogos).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-        private Label label2;
-        private DataGridView dataGridView1;
+        private DataGridView dgvJogos;
         private Button buttonPesquisarClientes;
         private Button buttonRemoverClientes;
         private Button buttonFechar;
+        private Label label1;
     }
 }

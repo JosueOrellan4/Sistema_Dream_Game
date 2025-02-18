@@ -41,11 +41,11 @@ namespace Dream_Game
         private void button1_Click(object sender, EventArgs e)
         {
             //Defina sua string de conexão com o banco
-            string conexaoString = "Server=localhost; Port=3306; Database=bd_dreamgame; Uid=root; Pwd=;";
+            string conexaoString = "Server=localhost; Port=3306; Database=db_dream_games; Uid=root; Pwd=;";
 
             //Defina a inserção de registro no BD
 
-            string query = "INSERT INTO tb_Jogo (Titulo, Avaliacao, Tamanho, Descricao, Valor, Desenvolvedor, Genero) VALUES (@Titulo, @Tamanho, @Descricao, @Valor, @Desenvolvedor, @Genero)";
+            string query = "INSERT INTO tb_jogo (Titulo, Avaliacao, Tamanho, Descricao, Valor, Desenvolvedor, Genero) VALUES (@Titulo, @Avaliacao, @Tamanho, @Descricao, @Valor, @Desenvolvedor, @Genero)";
 
             //Crie uma conexão com o BD
 
@@ -62,8 +62,8 @@ namespace Dream_Game
                         comando.Parameters.AddWithValue("@Titulo", textBoxTitulo.Text);
                         comando.Parameters.AddWithValue("@Avaliacao", textBoxAvaliacao.Text);
                         comando.Parameters.AddWithValue("@Tamanho", textBoxTamanho.Text);
-                        comando.Parameters.AddWithValue("@Descricao", textBoxDescricao.Text);
-                        comando.Parameters.AddWithValue("@Valor", textBoxValor.Text);
+                        comando.Parameters.AddWithValue("@Descricao", richTextBoxDescricao.Text);
+                        comando.Parameters.AddWithValue("@Valor", maskedTextBoxValor.Text);
                         comando.Parameters.AddWithValue("@Desenvolvedor", textBoxDesenvolvedor.Text);
                         comando.Parameters.AddWithValue("@Genero", textBoxGenero.Text);
 
@@ -74,8 +74,8 @@ namespace Dream_Game
                         textBoxTitulo.Text = "";
                         textBoxAvaliacao.Text = "";
                         textBoxTamanho.Text = "";
-                        textBoxDescricao.Text = "";
-                        textBoxValor.Text = "";
+                        richTextBoxDescricao.Text = "";
+                        maskedTextBoxValor.Text = "";
                         textBoxDesenvolvedor.Text = "";
                         textBoxGenero.Text = "";
                         textBoxTitulo.Focus();
@@ -93,5 +93,39 @@ namespace Dream_Game
         {
 
         }
+
+        private void textBoxTamanho_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxAvaliacao_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelDescricao_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            textBoxTitulo.Text = "";
+            textBoxAvaliacao.Text = "";
+            textBoxTamanho.Text = "";
+            richTextBoxDescricao.Text = "";
+            textBoxValor.Text = "";
+            textBoxDesenvolvedor.Text = "";
+            textBoxGenero.Text = "";
+            textBoxTitulo.Focus();
+
+        }
     }
 }
+
