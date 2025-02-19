@@ -70,7 +70,7 @@ namespace Dream_Game
                             comando.Parameters.AddWithValue("@Avaliacao", avaliacao);  // Valor convertido para decimal
                             comando.Parameters.AddWithValue("@Tamanho", textBoxTamanho.Text);
                             comando.Parameters.AddWithValue("@Descricao", richTextBoxDescricao.Text);
-                            comando.Parameters.AddWithValue("@Valor", maskedTextBoxValor);  
+                            comando.Parameters.AddWithValue("@Valor", maskedTextBoxAvaliacao.Text);  
                             comando.Parameters.AddWithValue("@Desenvolvedor", textBoxDesenvolvedor.Text);
                             comando.Parameters.AddWithValue("@Genero", textBoxGenero.Text);
 
